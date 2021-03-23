@@ -12,7 +12,11 @@ export class EmployeeService
   async getEmployeeList()
   {   
       return await this.employeeRepository.getEmployees();
-     
-
   }
+
+  async authenticateEmployee(userName:string,pwd:string)
+  {
+    console.log('in se');
+    return await this.employeeRepository.authenticateEmployee(userName,pwd);
+  } 
 }

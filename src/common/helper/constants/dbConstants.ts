@@ -1,5 +1,6 @@
 
 export enum StoredProcedure
 {
-    getEmployee="GetEmployee"
+    getEmployee="GetEmployee",
+    validateUser="ValidateUser"
 }

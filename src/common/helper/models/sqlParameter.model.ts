@@ -8,7 +8,7 @@ export class SQLParamterModel
     {
         this.name = name;
         this.value = value;
-        this.type = type;
+        this.type = type ?? sql.NVarChar;
     }
 
     name:string;

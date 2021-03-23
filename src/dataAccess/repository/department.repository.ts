@@ -1,4 +1,4 @@
-import { DBHelper } from "./dbHelper";
+import { DBHelper } from "../helper/dbHelper";
 
 export class DepartmentRepository extends DBHelper
 {
