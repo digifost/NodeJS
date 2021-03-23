@@ -13,13 +13,13 @@ export class EmployeeRepository extends DBHelper
         console.log('returning data');
         let parameters:SQLParamterModel[] = [
             {
-                name:"ab",
+                name:"name" ,
                 type:sql.NVarChar,
-                value:"a"
+                value:"chetan"
 
             }
         ]
 
-        return await this.executeProc(StoredProcedure.getEmployee);
+        return await this.executeProc(StoredProcedure.getEmployee,parameters);
     }
 }
