@@ -11,14 +11,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmployeeService = void 0;
 class EmployeeService {
-    constructor() {
+    constructor(employeeRepository) {
+        this.employeeRepository = employeeRepository;
     }
+    //
     GetEmployeeList() {
         return __awaiter(this, void 0, void 0, function* () {
             let data = [
                 { "name": "Chetan" }
             ];
-            return data;
+            return this.employeeRepository.getEmployees();
         });
     }
 }

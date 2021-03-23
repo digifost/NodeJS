@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc --project ./",
     "start": "npm run build && nodemon build/src/config/server.js",
-    "serve": "ts-node-dev --respawn --transpile-only src/config/server.ts",
+    "serve": "ts-node-dev --respawn src/config/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@types/mssql": "^6.0.7",
+    "camelcase-keys": "^6.2.2",
     "mssql": "^6.3.1"
   },
   "nodemonConfig": {

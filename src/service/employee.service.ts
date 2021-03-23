@@ -1,18 +1,18 @@
+import { EmployeeModel } from "../models/employee.model";
+import { EmployeeRepository } from "../repository/employeeRepository";
+
 export class EmployeeService
 {
-  constructor()
+  constructor(private employeeRepository:EmployeeRepository)
   {
 
   }
 
-  async GetEmployeeList()
-  {
-      let data = 
-      [
-          {"name":"Chetan"}
-      ];
-      
-      return data;
+  //
+  async getEmployeeList()
+  {   
+      return await this.employeeRepository.getEmployees();
+     
 
   }
 }
