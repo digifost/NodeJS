@@ -1,4 +1,4 @@
-import { DepartmentRepository } from "../repository/department.repository";
+import { DepartmentRepository } from "../../dataAccess/repository/department.repository";
 
 export class DepartmentService
 {

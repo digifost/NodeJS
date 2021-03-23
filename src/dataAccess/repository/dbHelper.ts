@@ -1,8 +1,8 @@
 import camelcaseKeys from 'camelcase-keys';
 import {poolPromise} from './connection';
 import sql from 'mssql'
-import { SQLParamterModel } from '../models/common/sqlParameter.model';
-import { StoredProcedure } from '../helper/database/dbConstants';
+import { SQLParamterModel } from '../../common/helper/models/sqlParameter.model';
+import { StoredProcedure } from '../../common/helper/constants/dbConstants';
 
 export class DBHelper 
 {

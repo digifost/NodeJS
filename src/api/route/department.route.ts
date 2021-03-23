@@ -1,5 +1,5 @@
 import { Router,Request,Response } from "express";
-import { DepartmentService } from "../service/department.service";
+import { DepartmentService } from "../../businessLayer/service/department.service";
 
 export const DepartmentRouter = (router:Router,service:DepartmentService):Router=>
 {

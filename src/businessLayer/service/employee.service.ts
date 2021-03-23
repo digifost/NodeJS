@@ -1,5 +1,5 @@
-import { EmployeeModel } from "../models/employee.model";
-import { EmployeeRepository } from "../repository/employeeRepository";
+import { EmployeeModel } from "../../common/helper/models/employee.model";
+import { EmployeeRepository } from "../../dataAccess/repository/employeeRepository";
 
 export class EmployeeService
 {

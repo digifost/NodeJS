@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc --project ./",
-    "start": "npm run build && nodemon build/src/config/server.js",
-    "serve": "ts-node-dev --respawn src/config/server.ts",
+    "start": "npm run build && nodemon build/src/api/config/server.js",
+    "serve": "ts-node-dev --respawn src/api/config/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -36,6 +36,6 @@
       "PORT": 8000
     },
     "ext": "js,json,ts",
-    "exec": "npm run build && nodemon build/src/config/server.js"
+    "exec": "npm run build && nodemon build/src/api/config/server.js"
   }
 }
