@@ -1,0 +1,27 @@
+steps:
+
+#build docker container
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/pdbakers-api-dev/dev-api', '.']
+  
+#push container to container registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'gcr.io/pdbakers-api-dev/dev-api']
+  
+#deploy to cloud run
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'dev'
+  - '--image'
+  - 'gcr.io/pdbakers-api-dev/dev-api'
+  - '--region'
+  - 'us-central1'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
+images:
+  - 'gcr.io/pdbakers-api-dev/dev-api' 
+  
+ 
